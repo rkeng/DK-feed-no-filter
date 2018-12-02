@@ -30,8 +30,8 @@ $(function() {
             owner:"ryan@ucsd.edu",
             name:"Ryan",
             position:{"lat":37.7749295,"lng":-122.41941550000001},
-            location:"San Fransisco",
-            uniqueId:"1543202264478ryan@ucsd.eduSanFransisco"
+            location:"San Francisco",
+            uniqueId:"1543202264478ryan@ucsd.eduSanFrancisco"
          },
          {
             category:"travel",
