@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Profile</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/profile.css">
+
+	<script>
+		// redirect to login page if not logged in
+		if (!sessionStorage.getItem('loginStatus')) location.href = "./login.html";
+	</script>
+</head>
+
+
+<!-- shift option f -->
+
+<body>
+	<div class="row center-screen-profile">
+		<div class="col-md-7">
+			<div class="card">
+				<div class="card-body">
+					<button id="logoffBtn" class="btn btn-danger float-right">Log Off</button>
+					<div class="row">
+						<div class="col-md-12">
+							<h4>Your Profile</h4>
+							<hr>
+							<p class="required">* Required fields</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="form-group row">
+								<label for="hide-image" style="text-align: right" class="col-3 col-form-label">Profile Picture
+								</label>
+								<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+									Change my profile picture
+									<span class="caret"></span>
+								</a>
+
+								<div>
+									<img src="" id="hide-image" style="display: none">
+								</div>
+
+								<div id="change">
+									<ul class="dropdown-menu">
+										<div class="container">
+											<div class="row">
+
+												<div class="col-xs-12 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile1.png" class="img-click" class="img-responsive">
+														</a>
+													</div>
+												</div>
+
+												<div class="col-xs-12 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile2.png" class="img-click" class="img-responsive">
+														</a>
+													</div>
+												</div>
+												<div class="col-xs-12 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile3.png" class="img-click" class="img-responsive">
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-8 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile4.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+
+												<div class="col-xs-8 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile5.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+												<div class="col-xs-8 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile6.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-xs-4 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile7.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+
+												<div class="col-xs-4 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile8.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+												<div class="col-xs-4 no-padding">
+													<div class="little-image">
+														<a href="#" class="thumbnail">
+															<img src="./img/profile9.png" class="img-click img-responsive">
+														</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</ul>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<label for="email" style="text-align: right" class="col-3 col-form-label">Email</label>
+								<div class="col-8">
+									<input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text"
+									 disabled>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="name" style="text-align: right" class="col-3 col-form-label">Full Name <span class="required">*</span>
+								</label>
+								<div class="col-8">
+									<input id="name" name="name" placeholder="Full Name" class="form-control here" type="text">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="birthDate" style="text-align: right" class="col-3 col-form-label">Date of Birth</label>
+								<div class="col-8">
+									<input type="date" id="birthDate" class="form-control">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="famCode" style="text-align: right" class="col-3 col-form-label">New Family Code
+								</label>
+								<div class="col-8">
+									<input id="famCode" name="famCode" placeholder="Join Another Family" class="form-control here" type="text">
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<label for="newpass" style="text-align: right" class="col-3 col-form-label">New Password
+								</label>
+								<div class="col-8">
+									<input id="newpass" name="newpass" placeholder="New Password" class="form-control here" type="password">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="confirmnewpass" style="text-align: right" class="col-3 col-form-label">Confirm New Password
+								</label>
+								<div class="col-8">
+									<input id="confirmnewpass" name="confirmnewpass" placeholder="Confirm New Password" class="form-control here" type="password">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-centered">
+									<button id="update" name="submit" data-toggle="modal" data-target="#exampleModalCenter" type="submit" class="btn btn-primary">Update
+										Profile
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fixed-bottom">
+		<a href="./index.html">
+			<span class="float-left text-center bottom-left-spacing">
+				<i class="fas fa-3x fa-arrow-circle-left" style="color:black"></i>
+			</span>
+		</a>
+	</div>
+
+	<!-- <div class="fixed-top">
+		<span class="float-right text-center top-right-spacing">
+			<button id="logoffBtn" class="btn btn-danger">Log Off</button>
+		</span>
+	</div> -->
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+	 aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					Are you sure to save your updates?
+				</div>
+				<div class="modal-footer">
+					<button id="confirmUpdate" class="btn btn-success">Yes, I confirm</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Go back and edit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="js/profile.js"></script>
+</body>
+
+</html>

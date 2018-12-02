@@ -1,0 +1,123 @@
+@media only screen and (max-width:800px) {
+
+  .food,.work,.travel,.fun {
+      text-align: center;
+      width: 100%;
+      font-size: 10px;
+      border-radius: 200px 200px 200px 200px;
+      -moz-border-radius: 200px 200px 200px 200px;
+      -webkit-border-radius: 200px 200px 200px 200px;
+      border: 0px solid #000000;
+  }
+}
+
+#header {
+  background-color: grey;
+  color: white;
+  text-align: left;
+  font-size: 15px;
+  padding: 5px 0px 5px 20px;
+}
+
+/** page structure **/
+#w {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 25px 20px;
+  padding-bottom: 35px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#userphoto {
+  display: block;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+#userphoto img {
+  display: block;
+  width: 50px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+
+.bootstrap-overrides .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.upperbutton {
+  font-family: 'Sofia';
+  font-size: 1.5em;
+  padding:1em;
+  margin: 1em;
+}
+
+.food {
+  padding: 3px 3px 3px 3px;
+  float: right;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  font-family: 'Allerta Stencil', 'Sans-serif';
+  background-color: gold;
+  color: white;
+}
+
+.work {
+  padding: 3px 3px 3px 3px;
+  float: right;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  font-family: 'Allerta Stencil', 'Sans-serif';
+  background-color: #103783;
+  color: white;
+}
+
+.travel {
+  padding: 3px 3px 3px 3px;
+  float: right;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  font-family: 'Allerta Stencil', 'Sans-serif';
+  background-color:#760b4f;
+  color: white;
+}
+
+.fun {
+  padding: 3px 3px 3px 3px;
+  float: right;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  font-family: 'Allerta Stencil', 'Sans-serif';
+  background-color:green;
+  color: white;
+}
+
+.feed-loc {
+  padding: 3px 3px 3px 3px;
+  font-size: 2em;
+  padding: 20px 0px 20px 0px;
+  font-family: 'Allerta Stencil', 'Sans-serif';
+}

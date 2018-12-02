@@ -1,0 +1,128 @@
+.avatar {
+   margin: 25px;
+}
+
+.avatar-align {
+   display: inline-block;
+   position: relative;
+}
+
+.avatar-minus {
+   cursor: pointer;
+   color: red;
+   position:absolute;
+   top: 0;
+   right: 0;
+}
+
+.avatar-width {
+	width: 110px;
+}
+
+.btn-feed { 
+   color: #ffffff; 
+   background-color: #FF6600; 
+   border-color: #FF6600; 
+} 
+  
+ .btn-feed:hover, 
+ .btn-feed:focus, 
+ .btn-feed:active, 
+ .btn-feed.active, 
+ .open .dropdown-toggle.btn-feed { 
+   color: #ffffff; 
+   background-color: #E85D00; 
+   border-color: #FF6600; 
+ } 
+  
+ .btn-feed:active, 
+ .btn-feed.active, 
+ .open .dropdown-toggle.btn-feed { 
+   background-image: none; 
+ } 
+  
+ .btn-feed.disabled, 
+ .btn-feed[disabled], 
+ fieldset[disabled] .btn-feed, 
+ .btn-feed.disabled:hover, 
+ .btn-feed[disabled]:hover, 
+ fieldset[disabled] .btn-feed:hover, 
+ .btn-feed.disabled:focus, 
+ .btn-feed[disabled]:focus, 
+ fieldset[disabled] .btn-feed:focus, 
+ .btn-feed.disabled:active, 
+ .btn-feed[disabled]:active, 
+ fieldset[disabled] .btn-feed:active, 
+ .btn-feed.disabled.active, 
+ .btn-feed[disabled].active, 
+ fieldset[disabled] .btn-feed.active { 
+   background-color: #FF6600; 
+   border-color: #FF6600; 
+ } 
+  
+ .btn-feed .badge { 
+   color: #FF6600; 
+   background-color: #ffffff; 
+ }
+
+ .btn-map { 
+   color: #ffffff; 
+   background-color: #611BBD; 
+   border-color: #130269; 
+ } 
+  
+ .btn-map:hover, 
+ .btn-map:focus, 
+ .btn-map:active, 
+ .btn-map.active, 
+ .open .dropdown-toggle.btn-map { 
+   color: #ffffff; 
+   background-color: #49247A; 
+   border-color: #130269; 
+ } 
+  
+ .btn-map:active, 
+ .btn-map.active, 
+ .open .dropdown-toggle.btn-map { 
+   background-image: none; 
+ } 
+  
+ .btn-map.disabled, 
+ .btn-map[disabled], 
+ fieldset[disabled] .btn-map, 
+ .btn-map.disabled:hover, 
+ .btn-map[disabled]:hover, 
+ fieldset[disabled] .btn-map:hover, 
+ .btn-map.disabled:focus, 
+ .btn-map[disabled]:focus, 
+ fieldset[disabled] .btn-map:focus, 
+ .btn-map.disabled:active, 
+ .btn-map[disabled]:active, 
+ fieldset[disabled] .btn-map:active, 
+ .btn-map.disabled.active, 
+ .btn-map[disabled].active, 
+ fieldset[disabled] .btn-map.active { 
+   background-color: #611BBD; 
+   border-color: #130269; 
+ } 
+  
+ .btn-map .badge { 
+   color: #611BBD; 
+   background-color: #ffffff; 
+ }
+
+ .under-h1 {
+    margin-top: 100px;
+ }
+
+ .badge-travel {
+  font-size: bold;
+  color: white;
+  background-color: #9900cc;
+}
+
+.badge-food {
+  font-size: bold;
+  color: white;
+  background-color:#ffb727;
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sign Up</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script>
+    // redirect to home page if logged in
+    if (sessionStorage.getItem('loginStatus')) location.href = "./";
+  </script>
+</head>
+
+<body style="background-image:url('img/signup-pic.jpg');height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover" opacity=0.8>
+  <div class="container" style="color:#320000">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="center-screen-ls" style="padding-right:1em;padding-bottom:1em">
+          <div class="jumbotron" style="background-color:transparent">
+            <h1 class="display-4"><strong>Hello, family</strong></h1>
+            <hr class="my-4" style="border-color:#320000">
+            <p class="lead"><strong>This is a web-app for networks built exclusively for families. You can share daily moments and locations with
+              your family anytime at anywhere</strong></p>
+            <!-- <p>Start Connecting Your Family By Signing Up Now ^^</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="center-screen-ls">
+          <form class="jumbotron" style="
+          background-color:rgba(255,255,255,.3); 
+          padding:3em">
+            <p class="required">* Required fields</p>
+            <div class="form-group row">
+              <label for="signup-email" class="col-sm-5 col-form-label">Email <span class="required">*</span></label>
+              <div class="col-sm-7">
+                <input type="email" class="form-control" id="signup-email" placeholder="Enter Email Address">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="signup-fmlyr" class="col-sm-5 col-form-label">Full Name <span class="required">*</span></label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="signup-fmlyr" placeholder="Enter Full Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="signup-password" class="col-sm-5 col-form-label">Password <span class="required">*</span></label>
+              <div class="col-sm-7">
+                <input type="password" class="form-control" id="signup-password" placeholder="Enter Password">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="signup-confirm-password" class="col-sm-5 col-form-label">Confirm Password&nbsp;<span class="required">*</span></label>
+              <div class="col-sm-7">
+                <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm Password">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="signup-fmlycode" class="col-sm-5 col-form-label">Family Code</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="signup-fmlycode" placeholder="Enter Family Code" oninput="this.value = this.value.toUpperCase()">
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="text-center" style="margin:1em 1em 1em 1em">
+                <a href="./login.html" style="color:rosybrown">Have an account already? Log in here.</a>
+                <br>
+              </div>
+              <button id="signupBtn" class="btn btn-success">Sign up</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+
+</html>

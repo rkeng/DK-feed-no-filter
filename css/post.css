@@ -1,0 +1,23 @@
+/* Category tags */
+.form-check label {
+   padding: 5px;
+   cursor:pointer;
+}
+.form-check input[type="radio"] {
+   visibility: hidden;
+}
+.form-check input[type="radio"]:checked + label {
+   border-bottom: 2px solid black;
+}
+.tag-work {
+   color: #103783;
+}
+.tag-travel {
+   color: #760b4f;
+}
+.tag-food {
+   color: gold;
+}
+.tag-fun {
+   color: green;
+}

@@ -1,0 +1,17 @@
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+.center-screen-profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: float-right;
+	min-height: 100vh;
+ } 

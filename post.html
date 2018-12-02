@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Post</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/post.css">
+
+	<script>
+		// redirect to login page if not logged in
+		if (!sessionStorage.getItem('loginStatus')) location.href = "./login.html";
+	</script>
+</head>
+
+<body>
+	<div class="container page-margin">
+		<h1>Mark Your Family Map</h1>
+		<fieldset class="form-group">
+			<!-- <a href="" class="btn btn-success btn-spacing"><i class="fas fa-map-pin"></i>&nbsp;&nbsp;Location</a> -->
+			<p class="required">* Required fields</p>
+
+			<div class="form-group">
+				<label for="locationTextField">Choose a Location: <span class="required">*</span></label>
+				<input id="locationTextField" type="text" class="form-control" placeholder="Search places">
+				<input id="lat" type="hidden">
+				<input id="lng" type="hidden">
+			</div>
+
+			<div class="form-group">
+				<label for="content">Post Content: <span class="required">*</span></label>
+				<textarea id="content" class="form-control" rows="8" placeholder="What&rsquo;s on your mind?"></textarea>
+			</div>
+
+			<div class="form-group">
+				<span>Choose a Category: </span><span class="required">*</span>
+				<div class="form-check" style="display:inline-block">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionWork" value="work" checked>
+					<label for="optionWork" class="form-check-label"><i class="fas fa-circle tag-work"></i> Work</label>
+				</div>
+				<div class="form-check" style="display:inline-block">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionTravel" value="travel">
+					<label for="optionTravel" class="form-check-label"><i class="fas fa-circle tag-travel"></i> Travel</label>
+				</div>
+				<div class="form-check" style="display:inline-block">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionFood" value="food">
+					<label for="optionFood" class="form-check-label"><i class="fas fa-circle tag-food"></i> Food</label>
+				</div>
+				<div class="form-check" style="display:inline-block">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionFun" value="fun">
+					<label for="optionFun" class="form-check-label"><i class="fas fa-circle tag-fun"></i> Fun</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<span>Choose an Image (Optional): </span><input type="file" accept="image/*" id="imgInp">
+				<img id="postImage" src="" alt="Post Image" hidden>
+				<div class="float-right text-center">
+					<div>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
+						<a href="./" class="btn btn-secondary">Cancel</a>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		 aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">Are you ready to submit?</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Once you&lsquo;ve submitted, you can go to &ldquo;View your family feeds&rdquo; to edit or delete your post.
+					</div>
+					<div class="modal-footer">
+						<button id="confirmBtn" class="btn btn-success">Yes, I confirm</a>
+							<button class="btn btn-secondary" data-dismiss="modal">Go back and edit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+
+	<script>
+		function init() {
+			var input = document.getElementById('locationTextField');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			google.maps.event.addListener(autocomplete, 'place_changed', function () {
+				var place = autocomplete.getPlace();
+				document.getElementById('locationTextField').value = place.name;
+				document.getElementById('lat').value = place.geometry.location.lat();
+				document.getElementById('lng').value = place.geometry.location.lng();
+			});
+		}
+
+		$(function () {
+			$('#confirmBtn').click(function () {
+				let posts;
+				if (sessionStorage.getItem('posts')) {
+					posts = JSON.parse(sessionStorage.getItem('posts'));
+				} else {
+					posts = [];
+				}
+
+				var currentDate = new Date();
+				var day = currentDate.getDate();
+				var month = currentDate.getMonth();
+				var year = currentDate.getFullYear();
+				var monthDateYear = (month + 1) + "/" + day + "/" + year;
+
+				let category = $("input[name='optionsRadios']:checked").val();
+				let content = $('#content').val();
+				let imgData = document.getElementById('postImage').src;
+				let name = JSON.parse(sessionStorage.getItem('loginStatus')).user.cred.name;
+				let owner = JSON.parse(sessionStorage.getItem('loginStatus')).user.email;
+				let date = monthDateYear;
+				let loc = $('#locationTextField').val();
+				let latitude = parseFloat($('#lat').val());
+				let longitude = parseFloat($('#lng').val());
+				let timestamp = currentDate.getTime();
+
+				if (!content || !loc) {
+					alert("Please fill in all required fields.");
+					return;
+				}
+
+				if (!latitude || !longitude) {
+					alert("Please enter a valid location.");
+					return;
+				}
+
+				let post = {
+					category: category,
+					content: content,
+					imgData: imgData,
+					date: date,
+					owner: owner,
+					name: name,
+					position: {
+						lat: latitude,
+						lng: longitude
+					},
+					location: loc,
+					uniqueId: timestamp + owner + loc.replace(/\s+/g, '')
+				}
+
+				posts.push(post);
+				sessionStorage.setItem('posts', JSON.stringify(posts));
+
+				location.href = "./map.html";
+			});
+		})
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					document.getElementById('postImage').src = e.target.result;
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+		$("#imgInp").change(function () {
+			readURL(this);
+		});
+	</script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAopqUmAMX-wPB-KsCvEJWiUozgtxfmYmM&libraries=places&callback=init"></script>
+
+</body>
+
+</html>
